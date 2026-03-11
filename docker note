@@ -1,0 +1,53 @@
+Docker:
+- container
+- 
+
+
+docker adalah implementasi container,
+container adalah pengisolasian suatu app yang ringan
+
+docker client dan docker server (deaomon)
+
+docker image?    
+docker registrty?
+docker container
+
+cek seluruh container :
+docker ps -a
+
+docker container ls -a
+
+docker container ls
+
+docker container create --name namecontainer nameimage:tag
+
+docker container start id/name(container)
+
+docker container stop id/name(container)
+
+docker container rm id/name(container)
+
+docker image ls
+
+docker image pull name:tag
+docker image rm name:tag
+
+container log => debug
+docker container logs id/name(container)
+
+nyala realtime
+docker container logs -f id/name(container)
+
+container exec, untuk mengeksekusi kode program, bisa juga untuk masuk ke container
+docker container exec -i -t id/name(container) /bin/bash
+
+
+container port
+port forwading, ketika buat container
+docker container create --name nameContainer --publish posthost:portcontainer image:tag
+bisa 2 kali paramater
+
+
+container environment variable:
+docker container create --name nameContainer --env KEY1="value" --env KEY2="value" image:tag
+
