@@ -1,0 +1,25 @@
+/* src/components/TodoList/TodoList.module.css */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.empty {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: #aaa;
+}
+
+.emptyIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.emptyText {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

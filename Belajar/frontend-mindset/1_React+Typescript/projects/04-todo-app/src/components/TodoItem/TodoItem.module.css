@@ -1,0 +1,85 @@
+/* src/components/TodoItem/TodoItem.module.css */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  transition: all 0.2s;
+  list-style: none;
+}
+
+.item:hover {
+  border-color: #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Checkbox button */
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid #d0d0d0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+/* Checkbox saat item completed */
+.completed .checkbox {
+  background: #6c63ff;
+  border-color: #6c63ff;
+}
+
+.checkbox:hover:not(.completed .checkbox) {
+  border-color: #6c63ff;
+}
+
+/* Teks todo */
+.text {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-break: break-word;
+  color: #333;
+  transition: all 0.2s;
+}
+
+/* Teks saat completed: strikethrough + memudar */
+.completed .text {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* Tombol hapus */
+.deleteButton {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  opacity: 0;             /* Tersembunyi by default */
+  transition: all 0.15s;
+}
+
+/* Tampilkan tombol hapus saat hover item */
+.item:hover .deleteButton {
+  opacity: 1;
+}
+
+.deleteButton:hover {
+  background: #fff0f0;
+  color: #e53e3e;
+}

@@ -1,0 +1,50 @@
+/* src/components/TodoInput/TodoInput.module.css */
+.form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  background: #fff;
+}
+
+.input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px #6c63ff22;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.button {
+  padding: 0.7rem 1.25rem;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+}
+
+.button:hover:not(:disabled) {
+  background: #5a52e0;
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

@@ -1,0 +1,140 @@
+{
+  "provinces": [
+    {
+      "id": 1,
+      "name": "Kepulauan Riau"
+    },
+    {
+      "id": 2,
+      "name": "DKI Jakarta"
+    },
+    {
+      "id": 3,
+      "name": "Bali"
+    }
+  ],
+  "regencies": [
+    {
+      "id": 1,
+      "name": "Kota Batam",
+      "province_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Kota Tanjung Pinang",
+      "province_id": 1
+    },
+    {
+      "id": 3,
+      "name": "Jakarta Selatan",
+      "province_id": 2
+    },
+    {
+      "id": 4,
+      "name": "Jakarta Barat",
+      "province_id": 2
+    },
+    {
+      "id": 5,
+      "name": "Kota Denpasar",
+      "province_id": 3
+    },
+    {
+      "id": 6,
+      "name": "Badung",
+      "province_id": 3
+    }
+  ],
+  "districts": [
+    {
+      "id": 1,
+      "name": "Batam Kota",
+      "regency_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Batu Ampar",
+      "regency_id": 1
+    },
+    {
+      "id": 3,
+      "name": "Belakang Padang",
+      "regency_id": 1
+    },
+    {
+      "id": 4,
+      "name": "Bukit Bestari",
+      "regency_id": 2
+    },
+    {
+      "id": 5,
+      "name": "Tanjung Pinang Barat",
+      "regency_id": 2
+    },
+    {
+      "id": 6,
+      "name": "Tanjung Pinang Kota",
+      "regency_id": 2
+    },
+    {
+      "id": 7,
+      "name": "Kebayoran Baru",
+      "regency_id": 3
+    },
+    {
+      "id": 8,
+      "name": "Kebayoran Lama",
+      "regency_id": 3
+    },
+    {
+      "id": 9,
+      "name": "Cilandak",
+      "regency_id": 3
+    },
+    {
+      "id": 10,
+      "name": "Kebon Jeruk",
+      "regency_id": 4
+    },
+    {
+      "id": 11,
+      "name": "Tamansari",
+      "regency_id": 4
+    },
+    {
+      "id": 12,
+      "name": "Grogol Petamburan",
+      "regency_id": 4
+    },
+    {
+      "id": 13,
+      "name": "Denpasar Selatan",
+      "regency_id": 5
+    },
+    {
+      "id": 14,
+      "name": "Denpasar Barat",
+      "regency_id": 5
+    },
+    {
+      "id": 15,
+      "name": "Denpasar Utara",
+      "regency_id": 5
+    },
+    {
+      "id": 16,
+      "name": "Kuta",
+      "regency_id": 6
+    },
+    {
+      "id": 17,
+      "name": "Kuta Selatan",
+      "regency_id": 6
+    },
+    {
+      "id": 18,
+      "name": "Kuta Utara",
+      "regency_id": 6
+    }
+  ]
+}

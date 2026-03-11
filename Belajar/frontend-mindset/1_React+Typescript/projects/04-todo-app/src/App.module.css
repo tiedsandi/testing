@@ -1,0 +1,51 @@
+/* src/App.module.css */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1rem 5rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 580px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  margin: 0;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #ccc;
+  padding-top: 0.5rem;
+}

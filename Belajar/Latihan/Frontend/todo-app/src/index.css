@@ -1,0 +1,345 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN SYSTEM — Todo App
+   Inspired by: To Do List with HTML, CSS & JS reference UI
+   ============================================================ */
+
+@theme {
+  /* ----------------------------------------------------------
+     COLOR PALETTE
+  ---------------------------------------------------------- */
+
+  /* Primary — tomato red (Add button, dates, checked icons, accents) */
+  --color-primary:        #e74c3c;
+  --color-primary-hover:  #c0392b;
+  --color-primary-light:  #fdecea;
+  --color-primary-muted:  #f5b7b1;
+
+  /* Page background */
+  --color-bg-page:        #dde4ee;
+
+  /* Card / container background */
+  --color-bg-card:        #f4f6f9;
+
+  /* Todo item row backgrounds */
+  --color-bg-item:        #e2e8f0;
+  --color-bg-item-done:   #d5dce7;
+
+  /* Input / search field */
+  --color-bg-input:       #ffffff;
+
+  /* Text */
+  --color-text-base:      #1a1a2e;
+  --color-text-sub:       #4a5568;
+  --color-text-muted:     #9ca3af;
+  --color-text-done:      #a0aec0;
+  --color-text-date:      #e74c3c;
+  --color-text-greeting:  #e74c3c;
+  --color-text-title:     #1a1a2e;
+
+  /* Border */
+  --color-border:         #d1d9e0;
+  --color-border-focus:   #e74c3c;
+
+  /* Icon colors */
+  --color-icon-trash:     #9ca3af;
+  --color-icon-trash-hover: #e74c3c;
+  --color-icon-check:     #e74c3c;
+
+  /* Neutrals */
+  --color-white:          #ffffff;
+  --color-gray-50:        #f9fafb;
+  --color-gray-100:       #f3f4f6;
+  --color-gray-200:       #e5e7eb;
+  --color-gray-300:       #d1d5db;
+  --color-gray-400:       #9ca3af;
+  --color-gray-500:       #6b7280;
+  --color-gray-600:       #4b5563;
+  --color-gray-700:       #374151;
+  --color-gray-800:       #1f2937;
+  --color-gray-900:       #111827;
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY
+  ---------------------------------------------------------- */
+
+  /* Font family */
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  /* Font sizes */
+  --font-size-2xs:   0.625rem;   /* 10px — tiny labels */
+  --font-size-xs:    0.75rem;    /* 12px — micro text  */
+  --font-size-sm:    0.875rem;   /* 14px — small text  */
+  --font-size-base:  1rem;       /* 16px — body        */
+  --font-size-md:    1.125rem;   /* 18px — slightly bigger body */
+  --font-size-lg:    1.25rem;    /* 20px — card titles */
+  --font-size-xl:    1.5rem;     /* 24px — section heading */
+  --font-size-2xl:   1.875rem;   /* 30px — page heading */
+  --font-size-3xl:   2.25rem;    /* 36px — large display */
+  --font-size-4xl:   3rem;       /* 48px — hero display */
+
+  /* Font weights */
+  --font-weight-light:      300;
+  --font-weight-normal:     400;
+  --font-weight-medium:     500;
+  --font-weight-semibold:   600;
+  --font-weight-bold:       700;
+  --font-weight-extrabold:  800;
+  --font-weight-black:      900;
+
+  /* Line heights */
+  --line-height-tight:    1.2;
+  --line-height-snug:     1.375;
+  --line-height-normal:   1.5;
+  --line-height-relaxed:  1.625;
+  --line-height-loose:    2;
+
+  /* Letter spacing */
+  --letter-spacing-tight:   -0.025em;
+  --letter-spacing-normal:   0em;
+  --letter-spacing-wide:     0.025em;
+  --letter-spacing-wider:    0.05em;
+  --letter-spacing-widest:   0.1em;
+
+  /* ----------------------------------------------------------
+     BORDER RADIUS
+  ---------------------------------------------------------- */
+  --radius-none:   0px;
+  --radius-sm:     4px;    /* subtle rounding (badges, tags) */
+  --radius-md:     8px;    /* inputs, small cards */
+  --radius-lg:     12px;   /* todo items, buttons */
+  --radius-xl:     16px;   /* panels */
+  --radius-2xl:    24px;   /* main card container */
+  --radius-3xl:    32px;   /* large containers */
+  --radius-full:   9999px; /* pills, circular elements */
+
+  /* ----------------------------------------------------------
+     SPACING SCALE
+  ---------------------------------------------------------- */
+  --spacing-0:    0px;
+  --spacing-1:    4px;
+  --spacing-2:    8px;
+  --spacing-3:    12px;
+  --spacing-4:    16px;
+  --spacing-5:    20px;
+  --spacing-6:    24px;
+  --spacing-7:    28px;
+  --spacing-8:    32px;
+  --spacing-9:    36px;
+  --spacing-10:   40px;
+  --spacing-12:   48px;
+  --spacing-14:   56px;
+  --spacing-16:   64px;
+  --spacing-20:   80px;
+  --spacing-24:   96px;
+
+  /* ----------------------------------------------------------
+     SHADOWS
+  ---------------------------------------------------------- */
+  --shadow-xs:   0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-sm:   0 1px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md:   0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-lg:   0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-xl:   0 16px 40px rgba(0, 0, 0, 0.14);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+
+  /* ----------------------------------------------------------
+     TRANSITIONS
+  ---------------------------------------------------------- */
+  --transition-fast:    150ms ease;
+  --transition-base:    200ms ease;
+  --transition-slow:    300ms ease;
+  --transition-slower:  400ms ease;
+
+  /* ----------------------------------------------------------
+     Z-INDEX SCALE
+  ---------------------------------------------------------- */
+  --z-base:     0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-modal:    1000;
+  --z-toast:    2000;
+}
+
+/* ============================================================
+   BASE / RESET
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background: var(--color-bg-page);
+  min-height: 100vh;
+  color: var(--color-text-base);
+  line-height: var(--line-height-normal);
+  font-size: var(--font-size-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"] {
+  font-family: inherit;
+  padding-left: 20px;
+}
+
+/* ============================================================
+   UTILITY CLASSES (component-level helpers)
+   ============================================================ */
+
+/* Card container */
+.card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-6);
+}
+
+/* Primary button */
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2) var(--spacing-5);
+  transition: background var(--transition-base);
+}
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+/* Ghost / outline button */
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-sub);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2) var(--spacing-5);
+  transition: all var(--transition-base);
+}
+.btn-ghost:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Input field */
+.input-base {
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-base);
+  outline: none;
+  transition: border-color var(--transition-base);
+  width: 100%;
+}
+.input-base:focus {
+  border-color: var(--color-border-focus);
+}
+.input-base::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Todo item row */
+.todo-item {
+  background: var(--color-bg-item);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-3) var(--spacing-4);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  transition: background var(--transition-fast);
+}
+.todo-item:hover {
+  background: var(--color-bg-item-done);
+}
+
+/* Completed todo item */
+.todo-item--done {
+  background: var(--color-bg-item-done);
+}
+.todo-item--done .todo-item__text {
+  color: var(--color-text-done);
+  text-decoration: line-through;
+}
+
+/* Date label */
+.date-label {
+  color: var(--color-text-date);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Greeting accent */
+.greeting-accent {
+  color: var(--color-text-greeting);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Page / section title */
+.title-page {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-title);
+  line-height: var(--line-height-tight);
+}
+.title-card {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-title);
+}
+
+/* Icon button (trash etc.) */
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-icon-trash);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  padding: var(--spacing-1);
+  transition: color var(--transition-fast);
+}
+.icon-btn:hover {
+  color: var(--color-icon-trash-hover);
+}
+
+/* Circular checkbox */
+.checkbox-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.checkbox-circle--checked {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}

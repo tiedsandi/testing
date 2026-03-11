@@ -1,0 +1,58 @@
+/* src/components/FilterBar/FilterBar.module.css */
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.6rem 0;
+  flex-wrap: wrap;
+}
+
+.count {
+  font-size: 0.8rem;
+  color: #888;
+  min-width: 90px;
+}
+
+.filters {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.filterButton {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 0.82rem;
+  color: #666;
+  transition: all 0.15s;
+}
+
+.filterButton:hover {
+  border-color: #6c63ff;
+  color: #6c63ff;
+}
+
+.filterButton.active {
+  border-color: #6c63ff;
+  color: #6c63ff;
+  background: #f0eeff;
+  font-weight: 600;
+}
+
+.clearButton {
+  font-size: 0.8rem;
+  color: #999;
+  background: transparent;
+  border: none;
+  text-decoration: underline;
+  padding: 0;
+  transition: color 0.15s;
+  min-width: 90px;
+  text-align: right;
+}
+
+.clearButton:hover {
+  color: #e53e3e;
+}
